@@ -1,0 +1,13 @@
+prefix=/Users/pawankarki/Desktop/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv
+exec_prefix=/Users/pawankarki/Desktop/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv
+libdir=/Users/pawankarki/Desktop/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv/lib
+sharedlibdir=/Users/pawankarki/Desktop/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv/lib
+includedir=/Users/pawankarki/Desktop/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
