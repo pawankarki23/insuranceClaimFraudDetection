@@ -1,8 +1,8 @@
 # tcl pkg-config source file
 
-prefix=/Users/pawankarki/Desktop/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv
-exec_prefix=/Users/pawankarki/Desktop/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv
-libdir=/Users/pawankarki/Desktop/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv/lib
+prefix=/Users/pawankarki/Desktop/Desktop-Pawan-MacBook-Pro/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv
+exec_prefix=/Users/pawankarki/Desktop/Desktop-Pawan-MacBook-Pro/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv
+libdir=/Users/pawankarki/Desktop/Desktop-Pawan-MacBook-Pro/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv/lib
 includedir=${prefix}/include
 
 Name: Tool Command Language

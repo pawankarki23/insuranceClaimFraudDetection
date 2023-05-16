@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from sklearn_pandas import CategoricalImputer
+from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
 from imblearn.over_sampling import RandomOverSampler
 class Preprocessor:
@@ -86,11 +86,13 @@ class Preprocessor:
                 """
         self.logger_object.log(self.file_object, 'Entered the separate_label_feature method of the Preprocessor class')
         try:
-            self.X=data.drop(labels=label_column_name,axis=1) # drop the columns specified and separate the feature columns
-            self.Y=data[label_column_name] # Filter the Label columns
-            self.logger_object.log(self.file_object,
-                                   'Label Separation Successful. Exited the separate_label_feature method of the Preprocessor class')
+            self.X = data.drop(labels=label_column_name,axis=1) # drop the columns specified and separate the feature columns
+            self.Y = data[label_column_name].to_frame() # Filter the Label columns
+            #self.Y = pd.DataFrame(self.Y, columns = label_column_name)
+            print(type(self.Y))
+            self.logger_object.log(self.file_object,'Label Separation Successful. Exited the separate_label_feature method of the Preprocessor class')
             return self.X,self.Y
+        
         except Exception as e:
             self.logger_object.log(self.file_object,'Exception occured in separate_label_feature method of the Preprocessor class. Exception message:  ' + str(e))
             self.logger_object.log(self.file_object, 'Label Separation Unsuccessful. Exited the separate_label_feature method of the Preprocessor class')
@@ -131,7 +133,7 @@ class Preprocessor:
             self.logger_object.log(self.file_object,'Finding missing values failed. Exited the is_null_present method of the Preprocessor class')
             raise Exception()
 
-    def impute_missing_values(self, data, cols_with_missing_values):
+    def impute_missing_values(self, data, cols_with_missing_values, data_type):
         """
                                         Method Name: impute_missing_values
                                         Description: This method replaces all the missing values in the Dataframe using KNN Imputer.
@@ -143,18 +145,26 @@ class Preprocessor:
                                         Revisions: None
                      """
         self.logger_object.log(self.file_object, 'Entered the impute_missing_values method of the Preprocessor class')
-        self.data= data
-        self.cols_with_missing_values=cols_with_missing_values
+        self.cols_with_missing_values = cols_with_missing_values
         try:
-            self.imputer = CategoricalImputer()
+            # initialize the imputer type based on the data type in the dataframe
+            if data_type == 'Categorial':
+                self.imputer = SimpleImputer(strategy='most_frequent')
+            else:
+                self.imputer = SimpleImputer(strategy='mean')
+                
             for col in self.cols_with_missing_values:
-                self.data[col] = self.imputer.fit_transform(self.data[col])
+                if col in data:
+                    data[col] = self.imputer.fit_transform(data[col].values.reshape(-1,1))
+                    
             self.logger_object.log(self.file_object, 'Imputing missing values Successful. Exited the impute_missing_values method of the Preprocessor class')
-            return self.data
+            return data
+        
         except Exception as e:
             self.logger_object.log(self.file_object,'Exception occured in impute_missing_values method of the Preprocessor class. Exception message:  ' + str(e))
             self.logger_object.log(self.file_object,'Imputing missing values failed. Exited the impute_missing_values method of the Preprocessor class')
             raise Exception()
+        
     def scale_numerical_columns(self,data):
         """
                                                         Method Name: scale_numerical_columns
@@ -166,15 +176,15 @@ class Preprocessor:
                                                         Version: 1.0
                                                         Revisions: None
                                      """
-        self.logger_object.log(self.file_object,
-                               'Entered the scale_numerical_columns method of the Preprocessor class')
+        self.logger_object.log(self.file_object,'Entered the scale_numerical_columns method of the Preprocessor class')
 
-        self.data=data
+        self.data = data
         self.num_df = self.data[['months_as_customer', 'policy_deductable', 'umbrella_limit',
                           'capital-gains', 'capital-loss', 'incident_hour_of_the_day',
                           'number_of_vehicles_involved', 'bodily_injuries', 'witnesses', 'injury_claim',
                           'property_claim',
                           'vehicle_claim']]
+        print(self.num_df.head())
 
         try:
 
@@ -191,7 +201,8 @@ class Preprocessor:
             self.logger_object.log(self.file_object,'Exception occured in scale_numerical_columns method of the Preprocessor class. Exception message:  ' + str(e))
             self.logger_object.log(self.file_object, 'scaling for numerical columns Failed. Exited the scale_numerical_columns method of the Preprocessor class')
             raise Exception()
-    def encode_categorical_columns(self,data):
+        
+    def encode_categorical_columns(self,data, is_null_present, cols_with_missing_values):
         """
                                                 Method Name: encode_categorical_columns
                                                 Description: This method encodes the categorical values to numeric values.
@@ -204,7 +215,8 @@ class Preprocessor:
                              """
         self.logger_object.log(self.file_object, 'Entered the encode_categorical_columns method of the Preprocessor class')
 
-        self.data=data
+        self.data = data
+
         try:
             self.cat_df = self.data.select_dtypes(include=['object']).copy()
             self.cat_df['policy_csl'] = self.cat_df['policy_csl'].map({'100/300': 1, '250/500': 2.5, '500/1000': 5})
@@ -215,22 +227,34 @@ class Preprocessor:
             self.cat_df['insured_sex'] = self.cat_df['insured_sex'].map({'FEMALE': 0, 'MALE': 1})
             self.cat_df['property_damage'] = self.cat_df['property_damage'].map({'NO': 0, 'YES': 1})
             self.cat_df['police_report_available'] = self.cat_df['police_report_available'].map({'NO': 0, 'YES': 1})
+
             try:
                 # code block for training
                 self.cat_df['fraud_reported'] = self.cat_df['fraud_reported'].map({'N': 0, 'Y': 1})
-                self.cols_to_drop=['policy_csl', 'insured_education_level', 'incident_severity', 'insured_sex',
-                                            'property_damage', 'police_report_available', 'fraud_reported']
+                self.cols_to_drop = ['policy_csl', 'insured_education_level', 'incident_severity', 'insured_sex',
+                                     'property_damage', 'police_report_available', 'fraud_reported']
             except:
                 # code block for Prediction
                 self.cols_to_drop = ['policy_csl', 'insured_education_level', 'incident_severity', 'insured_sex',
                                      'property_damage', 'police_report_available']
-            # Using the dummy encoding to encode the categorical columns to numerical ones
+            
 
+            # once the categorial data has been encoded into numerical labels, we need to impute the missing values
+            
+            if (is_null_present):
+                # missing value imputation
+                self.cat_df = self.impute_missing_values(self.cat_df, cols_with_missing_values, data_type='Categorial')  
+            
+
+            # Using the dummy encoding to encode the categorical columns to numerical ones
             for col in self.cat_df.drop(columns=self.cols_to_drop).columns:
                 self.cat_df = pd.get_dummies(self.cat_df, columns=[col], prefix=[col], drop_first=True)
 
+
             self.data.drop(columns=self.data.select_dtypes(include=['object']).columns, inplace=True)
-            self.data= pd.concat([self.cat_df,self.data],axis=1)
+
+            self.data = pd.concat([self.cat_df,self.data],axis=1)
+
             self.logger_object.log(self.file_object, 'encoding for categorical values successful. Exited the encode_categorical_columns method of the Preprocessor class')
             return self.data
 

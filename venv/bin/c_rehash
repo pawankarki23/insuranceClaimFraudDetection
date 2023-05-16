@@ -13,7 +13,7 @@
 # and add symbolic links to their hash values.
 
 my $dir = "";
-my $prefix = "/Users/pawankarki/Desktop/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv";
+my $prefix = "/Users/pawankarki/Desktop/Desktop-Pawan-MacBook-Pro/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv";
 
 my $errorcount = 0;
 my $openssl = $ENV{OPENSSL} || "openssl";

@@ -5,15 +5,15 @@
 # You can do whatever you want with this file.
 #
 
-prefix=/Users/pawankarki/Desktop/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv
-exec_prefix=/Users/pawankarki/Desktop/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv
-libdir=/Users/pawankarki/Desktop/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv/lib
-includedir=/Users/pawankarki/Desktop/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv/include
+prefix=/Users/pawankarki/Desktop/Desktop-Pawan-MacBook-Pro/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv
+exec_prefix=/Users/pawankarki/Desktop/Desktop-Pawan-MacBook-Pro/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv
+libdir=/Users/pawankarki/Desktop/Desktop-Pawan-MacBook-Pro/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv/lib
+includedir=/Users/pawankarki/Desktop/Desktop-Pawan-MacBook-Pro/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv/include
 
 Name: liblzma
 Description: General purpose data compression library
 URL: https://tukaani.org/xz/
-Version: 5.2.10
+Version: 5.4.2
 Cflags: -I${includedir}
 Libs: -L${libdir} -llzma
 Libs.private: -pthread -lpthread

@@ -1,13 +1,13 @@
 # Package Information for pkg-config
 
-prefix=/Users/pawankarki/Desktop/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv
+prefix=/Users/pawankarki/Desktop/Desktop-Pawan-MacBook-Pro/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
 
 Name: SQLite
 Description: SQL database engine
-Version: 3.41.2
+Version: 3.33.0
 Libs: -L${libdir} -lsqlite3
 Libs.private: -lz 
 Cflags: -I${includedir}

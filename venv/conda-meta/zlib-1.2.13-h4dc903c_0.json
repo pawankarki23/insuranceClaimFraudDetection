@@ -17,6 +17,7 @@
   ],
   "fn": "zlib-1.2.13-h4dc903c_0.conda",
   "legacy_bz2_md5": "8e495591e369ac161857a72011c0a296",
+  "legacy_bz2_size": 120272,
   "license": "Zlib",
   "license_family": "Other",
   "link": {
@@ -74,7 +75,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_e0ixpuooy8/croot/zlib_1666594984142/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
         "sha256": "c0c17b7a862e8ab6c12c78714dec753abf7766bfe6e7e7b53d40f7ba309e2b0e",
-        "sha256_in_prefix": "128c97e6adfd3d790691cecd170e7ad4a421eef6f96f671586e81b52b1e308fd",
+        "sha256_in_prefix": "dc2531779e51e915300bb5787e6a94228deb3f9fffce3c716262f55650e351f8",
         "size_in_bytes": 1487
       }
     ],

@@ -37,11 +37,9 @@ class prediction:
             # check if missing values are present in the dataset
             is_null_present, cols_with_missing_values = preprocessor.is_null_present(data)
 
-            # if missing values are there, replace them appropriately.
-            if (is_null_present):
-                data = preprocessor.impute_missing_values(data, cols_with_missing_values)  # missing value imputation
             # encode categorical data
-            data = preprocessor.encode_categorical_columns(data)
+            data = preprocessor.encode_categorical_columns(data, is_null_present, cols_with_missing_values)
+            
             data = preprocessor.scale_numerical_columns(data)
 
 

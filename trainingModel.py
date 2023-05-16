@@ -35,26 +35,31 @@ class trainModel:
             data_getter=data_loader.Data_Getter(self.file_object,self.log_writer)
             data=data_getter.get_data()
 
+            self.log_writer.log(self.file_object, '#########     ' + str(data.shape))
 
             """doing the data preprocessing"""
 
             preprocessor=preprocessing.Preprocessor(self.file_object,self.log_writer)
             data=preprocessor.remove_columns(data,['policy_number','policy_bind_date','policy_state','insured_zip','incident_location','incident_date','incident_state','incident_city','insured_hobbies','auto_make','auto_model','auto_year','age','total_claim_amount']) # remove the column as it doesn't contribute to prediction.
             data.replace('?',np.NaN,inplace=True) # replacing '?' with NaN values for imputation
+            self.log_writer.log(self.file_object, '#########     ' + str(data.shape))
 
             # check if missing values are present in the dataset
             is_null_present, cols_with_missing_values = preprocessor.is_null_present(data)
+            
+            self.log_writer.log(self.file_object, '#########     ' + str(data.shape))
 
+            # only handles  null in categorial data columns
             # if missing values are there, replace them appropriately.
-            if (is_null_present):
-                data = preprocessor.impute_missing_values(data, cols_with_missing_values)  # missing value imputation
-            #encode categorical data
-            data = preprocessor.encode_categorical_columns(data)
+            data = preprocessor.encode_categorical_columns(data, is_null_present, cols_with_missing_values)
+            self.log_writer.log(self.file_object, '#########     ' + str(data.shape))
+            
+            # multiple times training with a same dataset causing duplicate record
+            data.drop_duplicates(inplace = True)
 
             # create separate features and labels
-            X,Y=preprocessor.separate_label_feature(data,label_column_name='fraud_reported')
-
-
+            X,Y = preprocessor.separate_label_feature(data,label_column_name='fraud_reported')
+            
             """ Applying the clustering approach"""
 
             kmeans=clustering.KMeansClustering(self.file_object,self.log_writer) # object initialization.
@@ -62,9 +67,11 @@ class trainModel:
 
             # Divide the data into clusters
             X=kmeans.create_clusters(X,number_of_clusters)
+            self.log_writer.log(self.file_object, 'Got the data with respective clusters and labels')
 
             #create a new column in the dataset consisting of the corresponding cluster assignments.
-            X['Labels']=Y
+            X['Labels']=Y['fraud_reported']
+
 
             # getting the unique clusters from our dataset
             list_of_clusters=X['Cluster'].unique()

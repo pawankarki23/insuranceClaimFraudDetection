@@ -1,4 +1,4 @@
-#!/Users/pawankarki/Desktop/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv/bin/python
+#!/Users/pawankarki/Desktop/Desktop-Pawan-MacBook-Pro/DataScience/Krish-Naik/InsuranceClaimFraudDetection/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

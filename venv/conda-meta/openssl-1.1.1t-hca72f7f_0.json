@@ -136,6 +136,7 @@
   ],
   "fn": "openssl-1.1.1t-hca72f7f_0.conda",
   "legacy_bz2_md5": "ca5937e682d945681eea05bc74c4c83d",
+  "legacy_bz2_size": 3680201,
   "license": "OpenSSL",
   "license_family": "Apache",
   "link": {
@@ -153,7 +154,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_09uelblqk7/croot/openssl_1676330471948/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
         "sha256": "9846064b37feadcd1f12cd313a85013270d0f3390489c613e30f77605579f7d8",
-        "sha256_in_prefix": "adae97eeed5d40f6ea8579dd04889953992a8f3f9881e794af395e5e7138a2ef",
+        "sha256_in_prefix": "e76d8150fdbdee483ca35db15db4b3ee062221dc2ea4f252db17527e020c4254",
         "size_in_bytes": 7040
       },
       {
@@ -912,7 +913,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_09uelblqk7/croot/openssl_1676330471948/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
         "sha256": "364279b46bfd61bf12933adf0233f3efddf017c470c31c89d8fce8e7f0b8b3e5",
-        "sha256_in_prefix": "b9428b96e3bc60963af243693c3e0cb581754df3375f787e6b89256f165f0e3b",
+        "sha256_in_prefix": "a904652cadc2351f88f7e29858a6598b3b3fea6dec7a0373b4d75bfab5568b3a",
         "size_in_bytes": 2600436
       },
       {
@@ -921,7 +922,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_09uelblqk7/croot/openssl_1676330471948/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
         "sha256": "261d3babc5521868d5517e4b570e1e679bed4fdcbbffc8dc32eebcfbf52d9ab9",
-        "sha256_in_prefix": "14928278489aa4c0eef6db60f31a9aedce3d4b10e4f5bb65fd68fde4c7480511",
+        "sha256_in_prefix": "f6fe741ee40c6d8b92c2ada9b4a34ae1fecef5a2ee8745a986fd20807a3a9e05",
         "size_in_bytes": 4275384
       },
       {
@@ -956,7 +957,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_09uelblqk7/croot/openssl_1676330471948/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
         "sha256": "65306443eae8e82e30cc589ac08e775d85576702d40481bd256da7988442a991",
-        "sha256_in_prefix": "006575051e03aecd5ebbf85045fb3794e43fe5abf41626ff7e1756d2788151f7",
+        "sha256_in_prefix": "8ca93f6a428978d15a63875e7675e4614cafc8f298ef9ff7c0c6340cda74fbb2",
         "size_in_bytes": 523
       },
       {
@@ -965,7 +966,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_09uelblqk7/croot/openssl_1676330471948/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
         "sha256": "0508649280874f27598592128646c6973cf334a1a4b053191bafd9e4e3e0c92d",
-        "sha256_in_prefix": "f8568105157d4aba46295b8155ea3e9c9c80290e79fc7fc6495a92eb33c5d14f",
+        "sha256_in_prefix": "64c419db7331e78be6478de468048a973e9a5df7a0ab907e9886f7be49cdf6a3",
         "size_in_bytes": 515
       },
       {
@@ -974,7 +975,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_09uelblqk7/croot/openssl_1676330471948/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
         "sha256": "923fb794f4ccf8431817a0ef8d9d25b90023beafded7c2e90d85c1b0647c9f7d",
-        "sha256_in_prefix": "5d0f016aaa84740af47db2d626a935776c642dacf45e09e9b18199a0e28eca1d",
+        "sha256_in_prefix": "98dfe473e538740534165ddf37af1ad51deb76654e2801f9d4ab4c1b73ddc6ad",
         "size_in_bytes": 469
       },
       {

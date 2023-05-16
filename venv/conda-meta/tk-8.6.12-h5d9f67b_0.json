@@ -543,6 +543,7 @@
   ],
   "fn": "tk-8.6.12-h5d9f67b_0.conda",
   "legacy_bz2_md5": "d5b05e38d3bc8fe6d9bcdd91029db1c7",
+  "legacy_bz2_size": 3536231,
   "license": "TCL",
   "license_family": "BSD",
   "link": {
@@ -1244,7 +1245,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_a0b3437e-5427-478c-9c0d-3bf16a61dfacwyldasds/croots/recipe/tk_1654088774077/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
         "sha256": "b35d5b7efca35bc6111d0e48d14b654bd84dcc0d1a0800e0ebdb09acd7cfc97c",
-        "sha256_in_prefix": "cd8ab0c91fe2f372ca28e54f5ada1cfc686a0c7fa28dce59ab5cb47bd05e72cd",
+        "sha256_in_prefix": "0b6d8a3bcfd418f60d68d3a7f9d9690502d266684e7b7143413e3abe68ad98c3",
         "size_in_bytes": 5754
       },
       {
@@ -1288,7 +1289,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_a0b3437e-5427-478c-9c0d-3bf16a61dfacwyldasds/croots/recipe/tk_1654088774077/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
         "sha256": "df9a12079f9fe7b008e5391e441bff2cd421c3490c98a8ab8bf9bc4736419e03",
-        "sha256_in_prefix": "e49d0460086d373e67b8c82c06296062b5e39e71cf0b22c9e47f03a3d02a4a9d",
+        "sha256_in_prefix": "df0c99a7a9f0ebc73d1f9cfb0ced1b332eeef3e33639a8eda3a6fed9444fb832",
         "size_in_bytes": 1599776
       },
       {
@@ -1304,7 +1305,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_a0b3437e-5427-478c-9c0d-3bf16a61dfacwyldasds/croots/recipe/tk_1654088774077/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
         "sha256": "9642f2486231cba4e1cbcef38634eaf3713f111457917ddc9ff57bd792d29d59",
-        "sha256_in_prefix": "9ab7b40e3581fa8460d49ac6c704331689821da6f0d57629957ca6a16a3c6dd3",
+        "sha256_in_prefix": "802e8503e4147998ecc15fb7cba6fea786c291df7780ea504711f396e890084c",
         "size_in_bytes": 1609904
       },
       {
@@ -1320,7 +1321,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_a0b3437e-5427-478c-9c0d-3bf16a61dfacwyldasds/croots/recipe/tk_1654088774077/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
         "sha256": "433aaddaef024afb4053960b654326b9d50c95adb92008308a8bcf8f5af59cea",
-        "sha256_in_prefix": "a78fcc67c97a09e2fc388aed3224537a1e13e077969dbfe7f4da850e1db848ae",
+        "sha256_in_prefix": "0a2b106052c5e1688a00c68082bd0f2090c19e6b6b7134bc635395f3feb76272",
         "size_in_bytes": 1195
       },
       {
@@ -1329,7 +1330,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_a0b3437e-5427-478c-9c0d-3bf16a61dfacwyldasds/croots/recipe/tk_1654088774077/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
         "sha256": "3a111387e8768288eb5ece2d661a16f386f9556ee85eff161cedc57246fccc18",
-        "sha256_in_prefix": "dfc9b49c3722f4bc6782692b8641493fa18c3add5783837f439e016f450a4f03",
+        "sha256_in_prefix": "19a75fdecd5ff331c4aa19fb8c2d84d03cf910d65d3c30bbbe687e2c5cbf7e0c",
         "size_in_bytes": 1175
       },
       {
@@ -2948,7 +2949,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_a0b3437e-5427-478c-9c0d-3bf16a61dfacwyldasds/croots/recipe/tk_1654088774077/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
         "sha256": "68a7a03263bf9bb2c6636fc432484281b323fe0480ad34f91c8defad208999fc",
-        "sha256_in_prefix": "6ac15b44b0098dedde0852b17f3bd77395adb5d8c476349cc6332db45038d395",
+        "sha256_in_prefix": "c13590430966073decdb622bd97305c8c7a9c08cd0614ed330390c03386e8592",
         "size_in_bytes": 12106
       },
       {
@@ -2992,7 +2993,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_a0b3437e-5427-478c-9c0d-3bf16a61dfacwyldasds/croots/recipe/tk_1654088774077/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
         "sha256": "0eca4ce4bfe8bc12ec3777545369bafee25b4725f7af459fde502ed1c8a5b670",
-        "sha256_in_prefix": "4756419560f64697f98d038038d4b1484be13c4e91e908798d2b07a82fd1617a",
+        "sha256_in_prefix": "7b0b1fc074705b0e1d3ea656895dc5fff1ec373e868d0848e693228f39204577",
         "size_in_bytes": 7429
       },
       {
@@ -4282,7 +4283,7 @@
         "path_type": "hardlink",
         "prefix_placeholder": "/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_a0b3437e-5427-478c-9c0d-3bf16a61dfacwyldasds/croots/recipe/tk_1654088774077/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
         "sha256": "13daf30c516a20efcef1d8f9bc81d3b19601853cd14147d5a4a86337ddd6aa8d",
-        "sha256_in_prefix": "1263fcae28ff91788c0965076f2bc6e1e7b47286293c54e0bf0158cec0418b0d",
+        "sha256_in_prefix": "fef08d686c97aa2966c59ded937f7e3158b916e49a8c2eddfdbdf2a5bfbf98c9",
         "size_in_bytes": 6231
       }
     ],

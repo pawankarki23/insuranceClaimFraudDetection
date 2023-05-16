@@ -33,30 +33,35 @@ class train_validation:
 
             self.log_writer.log(self.file_object, "DataTransformation Completed!!!")
 
-            self.log_writer.log(self.file_object,
-                                "Creating Training_Database and tables on the basis of given schema!!!")
+            self.log_writer.log(self.file_object,"Creating Training_Database and tables on the basis of given schema!!!")
+            
             # create database with given name, if present open the connection! Create table with columns given in schema
             self.dBOperation.createTableDb('Training', column_names)
             self.log_writer.log(self.file_object, "Table creation Completed!!")
             self.log_writer.log(self.file_object, "Insertion of Data into Table started!!!!")
+            
             # insert csv files in the table
             self.dBOperation.insertIntoTableGoodData('Training')
             self.log_writer.log(self.file_object, "Insertion in Table completed!!!")
             self.log_writer.log(self.file_object, "Deleting Good Data Folder!!!")
+            
             # Delete the good data folder after loading files in table
             self.raw_data.deleteExistingGoodDataTrainingFolder()
             self.log_writer.log(self.file_object, "Good_Data folder deleted!!!")
             self.log_writer.log(self.file_object, "Moving bad files to Archive and deleting Bad_Data folder!!!")
+            
             # Move the bad files to archive folder
             self.raw_data.moveBadFilesToArchiveBad()
             self.log_writer.log(self.file_object, "Bad files moved to archive!! Bad folder Deleted!!")
             self.log_writer.log(self.file_object, "Validation Operation completed!!")
             self.log_writer.log(self.file_object, "Extracting csv file from table")
+            
             # export data in table to csvfile
             self.dBOperation.selectingDatafromtableintocsv('Training')
             self.file_object.close()
 
         except Exception as e:
+            print(str(e))
             raise e
 
 

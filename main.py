@@ -20,7 +20,9 @@ CORS(app)
 @app.route("/", methods=['GET'])
 @cross_origin()
 def home():
-    return render_template('index.html')
+    #return render_template('index.html')
+    return render_template('new_index.html')
+
 
 @app.route("/predict", methods=['POST'])
 @cross_origin()
@@ -75,8 +77,6 @@ def trainRouteClient():
 
             trainModelObj = trainModel() #object initialization
             trainModelObj.trainingModel() #training the model for the files in the table
-
-
     except ValueError:
 
         return Response("Error Occurred! %s" % ValueError)
@@ -90,6 +90,9 @@ def trainRouteClient():
         return Response("Error Occurred! %s" % e)
     return Response("Training successfull!!")
 
+
+
+# main function
 port = int(os.getenv("PORT",5001))
 if __name__ == "__main__":
     app.run(port=port,debug=True)
